@@ -49,19 +49,21 @@ Viral Panic was originally developed as part of the *Scalable Cloud Applications
 - **Kubernetes** – container orchestration
 - **Helm** – packaging and deploying the application to Kubernetes
 
-## Azure deployment approaches
+## Deployment approaches across the two courses
 
-The same application is deployed using two different Azure services.
+### Previous course: Scalable Cloud Applications
 
-**Azure App Service**
+The application was deployed to Azure App Service with multiple instances and to Azure Container Apps with HTTP-based autoscaling between 1 and 5 replicas. Both approaches used Bicep for infrastructure provisioning and separate GitHub Actions workflows.
 
-The web application runs on an App Service plan configured with multiple instances and platform-managed load balancing.
+The files from that course remain in this repository as background.
 
-**Azure Container Apps**
+### This course: Kubernetes
 
-The application runs as a container, with HTTP-based autoscaling configured between **1 and 5 replicas**.
+The application was deployed to a local Kubernetes cluster using k3d and to Azure Kubernetes Service (AKS), using the same Helm chart.
 
-Both deployment approaches use Bicep for infrastructure provisioning and have separate GitHub Actions workflows.
+The chart defines a Deployment, Service, ConfigMap, and Ingress. The application receives configuration and a Secret through environment variables, while Traefik handles incoming HTTP traffic.
+
+The Kubernetes pipeline builds the container image, publishes it to GitHub Container Registry (GHCR), and deploys it to AKS automatically on pushes to main, excluding documentation-only changes.
 
 ## What I learned
 
