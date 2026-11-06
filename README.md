@@ -2,6 +2,17 @@
 
 Viral Panic has grown beyond its original dashboard into a small interactive penguin office. 
 
+## Portfolio version
+
+This repository presents my project from the *Kubernetes* course. It builds on the application I developed during *Scalable Cloud Applications*, with Kubernetes deployments, Helm packaging, automated delivery to AKS, and the PengWin HQ interface.
+
+The two repositories show different stages of the same application:
+
+- **[Beacon – Scalable Cloud Applications](https://github.com/ArtByMagicUnicorn/Beacon):** Azure App Service, Container Apps, infrastructure as code, and scalability.
+- **Beacon-Kubernetes:** Kubernetes, Helm, ConfigMaps and Secrets, Ingress, and automated deployment to AKS.
+
+GitHub Actions are disabled in this portfolio repository. The workflow files remain as examples, and the successful pipeline run linked below belongs to the original course repository. The AKS cluster used for the demonstration has been deleted.
+
 ## Meet the team
 
 - **Sture** – Chief Suspicion Officer. Trusts coffee more than green status indicators.
